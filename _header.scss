@@ -1,0 +1,51 @@
+// variables generales
+
+$primary-color: #45B7EE;
+$color-secundario: #7D95F4;
+$color-letra: #f3f3f3;
+
+// -----------------------------
+
+.main__seccion1{
+    .title{
+        font-size: 5em;
+    }
+    .contenedor-texts{
+        font-size: 3em;
+    }
+    .typed{
+        color: $primary-color;
+        text-transform: capitalize;
+    }
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    overflow: hidden;
+
+    --opacidad-negro: 0.8;
+    background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url("img/bgVisionMundial/bgVisionMundial7.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    backdrop-filter: blur(10px);
+
+    position: relative;
+    z-index: 111;
+}
+
+// Responsive
+
+
+@media screen and (max-width: 768px){
+
+    .main__seccion1{
+        .title{
+            font-size: 2.5rem;
+        }
+    }
+    
+}

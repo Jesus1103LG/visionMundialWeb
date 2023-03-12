@@ -1,0 +1,109 @@
+// variables generales
+
+$primary-color: #45B7EE;
+$color-secundario: #7D95F4;
+$color-letra: #f3f3f3;
+
+// -----------------------------
+
+
+nav{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 222;
+}
+
+
+nav{
+    .navItems{
+        width: 30vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .itemNav.active, .itemNav:hover{
+            border-bottom: $color-letra solid 1px;
+            transition: .5s;
+        }
+    }
+    .logo{
+        display: flex;
+        margin-left: 5vw;
+        align-items: center;
+        cursor: pointer;
+        text-transform: uppercase;
+        .logo__img{
+            border-radius: 50%;
+            background-size: cover;
+            width: 70px;
+            height: 70px;
+            z-index: 111;
+        }
+    }
+    .checkbtn{
+        font-size: 30px;
+        color: #fff;
+        float: right;
+        line-height: 80px;
+        margin-right: 40px;
+        cursor: pointer;
+        display: none;
+        z-index: 111;
+    }
+    #check{
+        display: none;
+    }
+}
+
+
+// Responsive nav
+
+
+@media screen and (max-width: 768px) {
+
+    nav{
+        position: fixed;
+        .checkbtn{
+            display: block;
+        }
+        .navItems{
+            position: fixed;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            top: 80px;
+            left: -100%;
+            text-align: center;
+            transition: all .5s;
+            .itemNav{
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+                a{
+                    font-size: 20px;
+                }
+            }
+            .itemNav a:hover, .itemNav a.active{
+                background: none;
+            }
+
+        }
+        #check:checked ~ ul{
+            left: 0;
+            background: rgb(0, 0, 0,.9);
+        }
+        .logo{
+            margin-left: 5vw;
+        }
+    }
+
+    .nav.active{
+        background: #45B7EE;
+        transition: .5s;
+    }
+
+    
+}
